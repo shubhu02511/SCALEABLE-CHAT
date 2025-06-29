@@ -1,0 +1,37 @@
+{
+ "name": "server",
+ "version": "1.0.0",
+ "private": true,
+ "scripts": {
+  "start": "node dist/index",
+  "build": "tsc -p .",
+    "test": "echo \"No tests specified\" && exit 0",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write .",
+    "prettier": "prettier --check .",
+    "clean": "rm -rf dist",
+    "watch": "tsc -p . --watch",
+    "watch:dev": "tsc -p . --watch --preserveWatchOutput",
+    "watch:build": "tsc -p . --watch",
+    "watch:dev:build": "tsc -p . --watch --preserveWatchOutput",
+    "watch:dev:build:clean": "tsc -p . --watch --preserveWatchOutput && rm -rf dist",
+    "watch:dev:build:clean:lint": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts",
+    "watch:dev:build:clean:lint:format": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write .",
+    "watch:dev:build:clean:lint:format:test": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write . && echo \"No tests specified\" && exit 0",
+    "watch:dev:build:clean:lint:format:test:dev": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write . && echo \"No tests specified\" && exit 0 && tsc-watch --onSuccess \"node dist/index.js\"",
+
+    "watch:dev:build:clean:lint:format:test:dev:build": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write . && echo \"No tests specified\" && exit 0 && tsc-watch --onSuccess \"node dist/index.js\"",
+    "watch:dev:build:clean:lint:format:test:dev:build:clean": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write . && echo \"No tests specified\" && exit 0 && tsc-watch --onSuccess \"node dist/index.js\" && rm -rf dist",
+    "watch:dev:build:clean:lint:format:test:dev:build:clean:lint": "tsc -p . --watch --preserveWatchOutput && rm -rf dist && eslint . --ext .ts && prettier --write . && echo \"No tests specified\" && exit 0 && tsc-watch --onSuccess \"node dist/index.js\" && rm -rf dist && eslint . --ext .ts",
+    
+
+  "dev": "tsc-watch --onSuccess \"node dist/index.js\""
+ },
+ "devDependencies": {
+  "tsc-watch": "^7.1.1",
+  "typescript": "^5.8.3"
+ },
+ "dependencies": {
+  "socket.io": "^4.8.1"
+ }
+}

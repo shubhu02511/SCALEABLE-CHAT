@@ -1,0 +1,53 @@
+:root {
+  --background: #37862d;
+  --foreground: #ffffff;
+  --input-bg: #333;
+  --input-border: #ccc;
+  --button-bg: #666;
+  --button-border: #ccc;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.chat-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 2rem;
+}
+
+.chat-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px 0 0 12px;
+  width: 300px;
+  outline: none;
+}
+
+.chat-send {
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0 12px 12px 0;
+  cursor: pointer;
+}
+.chat-send:hover {
+  background-color: #555;
+  border-color: #bbb;
+  
+}

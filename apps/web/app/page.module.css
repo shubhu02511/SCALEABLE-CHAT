@@ -1,0 +1,109 @@
+.background {
+  min-height: 100vh;
+  width: 100vw;
+  background: linear-gradient(135deg, #3a1c71 0%, #d76d77 50%, #ffaf7b 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chat-container {
+  background: rgba(30, 30, 60, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  width: 100%;
+  max-width: 400px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 16px 16px 16px;
+}
+
+.chat-header {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 16px;
+  letter-spacing: 1px;
+}
+
+.messages-list {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.message-bubble-sent {
+  align-self: flex-end;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 18px 18px 4px 18px;
+  max-width: 75%;
+  word-break: break-word;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(67, 206, 162, 0.15);
+}
+
+.message-bubble-received {
+  align-self: flex-start;
+  background: linear-gradient(90deg, #ffaf7b 0%, #d76d77 100%);
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 18px 18px 18px 4px;
+  max-width: 75%;
+  word-break: break-word;
+  font-size: 1rem;
+  box-shadow: 0 2px 8px rgba(215, 109, 119, 0.15);
+}
+
+.input-area {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.chat-input {
+  flex: 1;
+  height: 44px;
+  padding: 0 14px;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: #23234a;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(31, 38, 135, 0.07);
+}
+
+.button {
+  height: 44px;
+  padding: 0 18px;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.button:hover {
+  background: linear-gradient(90deg, #185a9d 0%, #43cea2 100%);
+}
+
+@media (max-width: 500px) {
+  .chat-container {
+    max-width: 98vw;
+    min-height: 80vh;
+    padding: 10px 2px 10px 2px;
+  }
+  .chat-header {
+    font-size: 1.1rem;
+  }
+}
